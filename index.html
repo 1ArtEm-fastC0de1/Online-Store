@@ -7,13 +7,17 @@
     <link rel="stylesheet" href="styles/style.css">
     <script src="scripts/counter.js" defer></script>
     <script src="scripts/cart.js" defer></script>
+    <script src="scripts/toogleCartStatus.js" defer></script>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
     <title>Pizza Super</title>
 </head>
 <div id="cart-panel" class="cart-panel">
-    <h2>Ваше замовлення</h2>
-    <div id="cart-items"></div>
-    <button id="checkout-btn" class="checkout-btn">Оформити замовлення</button>
+    <h3>Ваше замовлення</h3>
+    <div id="empty-cart" class="empty-cart">Кошик порожній</div>
+    <div id="cart-items" class="cart-wrapper"></div>
+    <button id="checkout-btn" class="checkout-btn" style="display:none;">
+        Оформити замовлення
+    </button>
 </div>
 
 <div id="cart-overlay" class="cart-overlay"></div>
