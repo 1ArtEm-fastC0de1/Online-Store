@@ -44,12 +44,11 @@ function updateCartUI() {
         </div>
         `);
     });
-
     document.querySelectorAll("#cart-count").forEach(el => el.innerText = totalCount);
-
     document.querySelector("#checkout-btn").innerText = `Оформити замовлення — ${totalPrice} грн`;
 
     attachDeleteHandlers();
+    toggleCartStatus();
 }
 function attachDeleteHandlers() {
     document.querySelectorAll("[data-remove]").forEach(btn => {
@@ -60,8 +59,6 @@ function attachDeleteHandlers() {
         });
     });
 }
-
-
 const cartPanel = document.getElementById('cart-panel');
 const cartOverlay = document.getElementById('cart-overlay');
 const cartIcon = document.querySelector('.cart-header');
